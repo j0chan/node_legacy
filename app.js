@@ -5,6 +5,9 @@ const port = 3000
 
 app.set('view engine', 'ejs')
 app.set('views', './views')
+// static file serving (정적파일 서빙, 보통 public에 저장)
+app.use(express.static(__dirname + '/public'))
+
 
 // localhost:3000 을 통해 접속
 app.get('/', (req, res) => {
