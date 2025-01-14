@@ -54,6 +54,7 @@ app.get('/contact', (req, res) => {
     res.render('contact')
 })
 
+// CRUD of Create
 app.post('/api/contact', (req, res) => {
     const name = req.body.name;
     const phone = req.body.phone;
@@ -74,6 +75,23 @@ app.post('/api/contact', (req, res) => {
         }
     })
 })
+
+// CRUD of Read
+app.get('/contact', (req, res) => {
+    const selectQuery = 
+        `SELECT * FROM contact ORDER BY id DESC`
+
+    connectionPool.query(selectQuery, (err, result) => {
+        if(err) {
+            console.error('데이터 조회 중 에러 발생: ', err);
+            res.status(500).send('내부 서버 오류')
+        } else {
+            console.log('데이터 조회 완료')
+            console.log(result)
+            res.render('contactList', {lists: result})
+        }
+    })
+});
 
 
 // listen은 마지막에 두는 것 권장
