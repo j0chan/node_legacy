@@ -21,6 +21,7 @@ app.get('/users', (req, res) => {
 
 app.get('/blog', (req, res) => {
     res.render('blog')
+})
 
 // 라우팅 하는 곳
 // localhost:3000 을 통해 접속
