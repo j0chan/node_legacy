@@ -10,6 +10,7 @@ app.set('views', './views')
 app.use(express.static(__dirname + '/public'))
 
 
+// 라우팅 하는 곳
 // localhost:3000 을 통해 접속
 app.get('/', (req, res) => {
     res.render('index');
@@ -23,8 +24,10 @@ app.get('/blog', (req, res) => {
     res.render('blog')
 })
 
-// 라우팅 하는 곳
-// localhost:3000 을 통해 접속
+app.get('/contact', (req, res) => {
+    res.render('contact')
+})
+
 app.post('/api/contact', (req, res) => {
     const name = req.body.name;
     const phone = req.body.phone;
