@@ -2,26 +2,19 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+// 라우팅 하는 곳
 // localhost:3000 을 통해 접속
-app.get('/', (req, res) => {
-    console.log('Got a GET request from Client')
-    res.send('Got a response from Server')
+app.post('/api/contact', (req, res) => {
+    const name = req.body.name;
+    const phone = req.body.phone;
+    const email = req.body.email;
+    const memo = req.body.memo;
+
+    const data = `${name} ${phone} ${email} ${memo}`
+
+    res.send(data)
 })
 
-app.post('/', (req, res) => {
-    console.log('Got a POST request from Client')
-    res.send('Got a response from Server')
-})
-
-app.put('/user', (req, res) => {
-    console.log('Got a PUT request from Client')
-    res.send('Got a response from Server')
-})
-
-app.delete('/user', (req, res) => {
-    console.log('Got a DELETE request from Client')
-    res.send('Got a response from Server')
-})
 
 // listen은 마지막에 두는 것 권장
 app.listen(port, () => {
