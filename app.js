@@ -93,12 +93,31 @@ app.get('/contactList', (req, res) => {
     })
 });
 
+// CRUD of Update
+app.post('/api/contactUpdate/:id', (req, res => {
+    const id = req.params.id
+    const status = "done"
+    const updateQuery = 
+        `UPDATE contact SET status = '${status}' WHERE id='${id}'`
+    
+    connectionPool.query(updateQuery, (err, result) => {
+        if(err) {
+            console.error('데이터 수정 중 에러 발생: ', err);
+            res.status(500).send('내부 서버 오류')
+        } else {
+            console.log('데이터 수정 완료')
+            console.log(result)
+            res.send("<script>alert('문의사항의 상태가 변경되었습니다.'); location.href='/contactList' </script>")
+        }
+    })
+}))
+
 // CRUD of Delete (원래 app.delete 사용, but 현재는 편의를 위해 app.post방식 적용)
 // path variable 방식 접근
 app.post('/api/contactDelete/:id', (req, res) => {
     const id = req.params.id
     const deleteQuery = 
-        `DELETE FROM CONTACT WHERE ID = '${id}'`
+        `DELETE FROM contact WHERE id = '${id}'`
 
     connectionPool.query(deleteQuery, (err, result) => {
         if(err) {
