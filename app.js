@@ -93,6 +93,26 @@ app.get('/contactList', (req, res) => {
     })
 });
 
+// CRUD of Delete (원래 app.delete 사용, but 현재는 편의를 위해 app.post방식 적용)
+// path variable 방식 접근
+app.post('/api/contactDelete/:id', (req, res) => {
+    const id = req.params.id
+    const deleteQuery = 
+        `DELETE FROM CONTACT WHERE ID = '${id}'`
+
+    connectionPool.query(deleteQuery, (err, result) => {
+        if(err) {
+            console.error('데이터 삭제 중 에러 발생: ', err);
+            res.status(500).send('내부 서버 오류')
+        } else {
+            console.log('데이터 삭제 완료')
+            console.log(result)
+            res.send("<script>alert('문의사항이 삭제되었습니다.'); location.href='/contactList' </script>")
+        }
+    })
+})
+
+
 
 // listen은 마지막에 두는 것 권장
 app.listen(port, () => {
