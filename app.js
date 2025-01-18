@@ -94,7 +94,7 @@ app.get('/contactList', (req, res) => {
 });
 
 // CRUD of Update
-app.post('/api/contactUpdate/:id', (req, res => {
+app.post('/api/contactUpdate/:id', (req, res) => {
     const id = req.params.id
     const status = "done"
     const updateQuery = 
@@ -110,7 +110,7 @@ app.post('/api/contactUpdate/:id', (req, res => {
             res.send("<script>alert('문의사항의 상태가 변경되었습니다.'); location.href='/contactList' </script>")
         }
     })
-}))
+})
 
 // CRUD of Delete (원래 app.delete 사용, but 현재는 편의를 위해 app.post방식 적용)
 // path variable 방식 접근
