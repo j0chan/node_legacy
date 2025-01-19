@@ -1,6 +1,419 @@
-<%-include('layouts/header.ejs')%>
-    
-    <h2>메인페이지입니다.</h2>
-    <img src="papago.jpg">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jQuery 추가 -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
 
-<%-include('layouts/footer.ejs')%>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container"> <a class="navbar-brand navbar-logo" href="#"> <h2>My Home</h2> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="fas fa-bars"></span> </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">HOME</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">PROFILE</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">ABOUT ME</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">LINK</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">PORTFOLIO</a> </li>
+        <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">CONTACT</a> </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navbar --> 
+
+<!-------HOME Start------->
+<section class="banner" data-scroll-index='0'>
+  <div class="banner-overlay">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-12">
+          <div class="banner-text">
+            <h2 class="white">Welcome to my personal homepage.<br></h2>
+            <h6 class="banner-text white">You can find various information about me, including my profile, goals, related sites, and portfolio on this homepage.
+              <br><br>If you have any questions, you can ask me directly on the CONTACT page.
+            </h6>
+            <h6></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span class="svg-wave"> <img class="svg-hero" src="images/applight-wave.svg"> </span> </section>
+
+<!-------HOME End-------> 
+
+<!-------PROFILE Start------->
+<section class="about section-padding prelative" data-scroll-index='1'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>PROFILE</h3>
+          <span class="line"></span>
+        </div>
+        <div class="section-content text-center">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.2s">
+                <img src="images/hongik.png" alt="Support Icon" class="icon-img" />
+                <h5>Hongik University</h5>
+                <p>Studying at Hongik University, <br>Sejong Campus.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.4s">
+                <img src="images/sw.png" alt="Cross Platform Icon" class="icon-img" />
+                <h5>SW Convergence</h5>
+                <p>4th Year, Department of Software Convergence</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-box wow fadeInUp" data-wow-delay="0.6s">
+                <img src="images/metaverse.png" alt="Fast Icon" class="icon-img" />
+                <h5>Metaverse Academy</h5>
+                <p>Participant of Metaverse Academy, <br>4th Term</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .icon-img {
+    width: 100%; /* 원하는 너비 */
+    height: 150px; /* 고정 높이 */
+    object-fit: contain; /* 비율 유지하면서 조정 */
+  }
+</style>
+
+<!-------PROFILE End-------> 
+
+
+<!-------ABOUT ME Start------->
+<section class="feature section-padding" data-scroll-index='2'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>ABOUT ME</h3>
+          <span class="line"></span>
+        </div>
+        <div class="section-content text-center">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+              <div class="media-body text-right media-right-margin">
+                <h2>Personality</h2>
+              </div>
+            </div>
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>ISTP</h5>
+                  <p>An MBTI type that is well-suited for coding.</p>
+                </div>
+              </div>
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>Focus</h5>
+                  <p>Once focused, can sustain attention for a long time.</p>
+                </div>
+              </div>
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
+                <div class="media-body text-right media-right-margin">
+                  <h5>Positivity</h5>
+                  <p>Maintains a positive mindset in any situation.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-none d-md-block d-lg-block">
+              <div class="feature-mobile"> <img src="images/profile.png" class="img-fluid wow fadeInUp"/> </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                <div class="media-body text-left">
+                  <h2>Goals</h2>
+                </div>
+              </div>
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.2s">
+                <div class="media-body text-left">
+                  <h5>Backend Developer</h5>
+                  <p>Backend developers with expertise in multiple disciplines</p>
+                </div>
+              </div>
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.4s">
+                <div class="media-body text-left">
+                  <h5>Launching My Own Application</h5>
+                  <p>The goal of creating and releasing a unique application that solves specific problems or meets the needs of users in a particular niche.</p>
+                </div>
+              </div>
+              <div class="media single-feature wow fadeInUp" data-wow-delay="0.6s">
+                <div class="media-body text-left">
+                  <h5>Found a Startup</h5>
+                  <p>The aspiration to create and grow a new business that offers innovative products or services, aiming for scalability and impact in the market.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-------ABOUT ME End-------> 
+
+<!-------LINK Start------->
+<section class="team section-padding" data-scroll-index='3'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>LINK</h3>
+          <span class="line"></span>
+        </div>
+        <div class="section-content text-center">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="https://github.com/j0chan" target="_blank">
+                <div class="team-detail wow bounce" data-wow-delay="0.2s"> <img src="images/github.png" class="img-fluid"/>
+                  <h4>Github</h4>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <a href="https://chan-code.tistory.com/" target="_blank">
+                <div class="team-detail wow bounce" data-wow-delay="0.4s"> <img src="images/tistory.png" class="img-fluid"/>
+                  <h4>Tistory</h4>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4">
+              <div class="team-detail wow bounce" data-wow-delay="0.6s"> <img src="images/instagram.png" class="img-fluid"/>
+                <h4>Instagram</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-------LINK End-------> 
+
+<!-------PORTFOLIO Start------->
+<section class="testimonial section-padding" data-scroll-index='4'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center white">
+          <h3>PORTFOLIO</h3>
+          <span class="line"></span>
+        </div>
+        
+      <div class="section-content">
+        <div class="row">
+          <div class="offset-md-2 col-md-8 col-sm-12">
+            <div class="slider">
+              <div class="slider-item">
+                <div class="test-img"><img src="images/project1.png" alt="Placeholder" width="157" height="157"></div>
+                <div class="test-text"><span class="title"><span>Project 1</span> Youngchan Jung</span> Implemented project will be posted here.</div>
+              </div>
+              <div class="slider-item">
+                <div class="test-img"><img src="images/project2.png" alt="Placeholder" width="157" height="157"></div>
+                <div class="test-text"><span class="title"><span>Project 2</span> Youngchan Jung</span> Implemented project will be posted here.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-------PORTFOLIO End-------> 
+
+
+<!-------CONTACT Start------->
+<section class="contact section-padding" data-scroll-index='6'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center">
+          <h3>CONTACT</h3>
+          <span class="line"></span>
+        </div>
+        <div class="section-content">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+              <!-- Submit Form start -->
+              <form id="contact_form" action="api/contact" method="post">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" id="your_name" class="form-input w-100" name="name" placeholder=" Name" required>
+                  </div>
+                  <div class="col">
+                    <input type="number" id="phone" class="form-input w-100" name="phone" placeholder="Phone" required>
+                  </div>
+                  <div class="col">
+                    <input type="email" id="email" class="form-input w-100" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <input type="text" id="subject" class="form-input w-100" name="subject" placeholder="Subject">
+                <textarea class="form-input w-100" id="memo" placeholder="Message" name="memo"></textarea>
+                <button class="btn-grad w-100 text-uppercase" type="submit" name="button">submit</button>
+              </form>
+              <!-- Submit Form end -->
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="contact-info white">
+                <div class="contact-item media"> <i class="fa fa-map-marker-alt media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">Address</p>
+                    <p class="text-uppercase">Seoul, South Korea</p>
+                  </div>
+                </div>
+                <div class="contact-item media"> <i class="fa fa-mobile media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">Phone</p>
+                    <p class="text-uppercase"><a class="text-white" href="tel:+15173977100">+82 10-5767-3644</a> </p>
+                  </div>
+                </div>
+                <div class="contact-item media"> <i class="fa fa-envelope media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">E-mail</p>
+                    <p class="text-uppercase"><a class="text-white" href="mailto:abcdefg@gmail.com">wdc4512@naver.com</a> </p>
+                  </div>
+                </div>
+                <div class="contact-item media"> <i class="fa fa-clock media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">Working Hours</p>
+                    <p class="text-uppercase">Mon-Fri 10:00 to 19:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-------CONTACT End-------> 
+
+<!-------Download End------->
+<section class="download section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="sectioner-header text-center white">
+          <h3>Thank You For Visiting My Website</h3>
+          <span class="line"></span>
+          <p class="white">Please contact us via email or phone for any inquiries.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-------Download End------->
+
+<!-- <footer class="footer-copy">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <p>2018 &copy; Applight. Website Designed by <a href="http://w3Template.com" target="_blank" rel="dofollow">W3 Template</a></p>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
+<!-- scrollIt js --> 
+<script src="js/scrollIt.min.js"></script> 
+<script src="js/wow.min.js"></script> 
+<script>
+	wow = new WOW();
+	wow.init();
+$(document).ready(function(e) {
+
+	$('#video-icon').on('click',function(e){
+	e.preventDefault();
+	$('.video-popup').css('display','flex');
+	$('.iframe-src').slideDown();
+	});
+	$('.video-popup').on('click',function(e){
+	var $target = e.target.nodeName;
+	var video_src = $(this).find('iframe').attr('src');
+	if($target != 'IFRAME'){
+	$('.video-popup').fadeOut();
+	$('.iframe-src').slideUp();
+	$('.video-popup iframe').attr('src'," ");
+	$('.video-popup iframe').attr('src',video_src);
+	}
+	});
+
+	$('.slider').bxSlider({
+	pager: false
+	});
+});
+    
+$(window).on("scroll",function () {
+
+	var bodyScroll = $(window).scrollTop(),
+	navbar = $(".navbar");
+	
+	if(bodyScroll > 50){
+	$('.navbar-logo img').attr('src','images/logo-black.png');
+	navbar.addClass("nav-scroll");
+
+}else{
+	$('.navbar-logo img').attr('src','images/logo.png');
+	navbar.removeClass("nav-scroll");
+}
+
+});
+$(window).on("load",function (){
+	var bodyScroll = $(window).scrollTop(),
+	navbar = $(".navbar");
+	
+	if(bodyScroll > 50){
+	$('.navbar-logo img').attr('src','images/logo-black.png');
+	navbar.addClass("nav-scroll");
+	}else{
+	$('.navbar-logo img').attr('src','images/logo-white.png');
+	navbar.removeClass("nav-scroll");
+	}
+
+	$.scrollIt({
+	
+	easing: 'swing',      // the easing function for animation
+	scrollTime: 900,       // how long (in ms) the animation takes
+	activeClass: 'active', // class given to the active nav element
+	onPageChange: null,    // function(pageIndex) that is called when page is changed
+	topOffset: -63
+	});
+});
+
+</script>
+</body>
+</html>

@@ -59,11 +59,12 @@ app.post('/api/contact', (req, res) => {
     const name = req.body.name;
     const phone = req.body.phone;
     const email = req.body.email;
+    const subject = req.body.subject;
     const memo = req.body.memo;
 
     const SQL_Query =
-        `INSERT INTO contact(name, phone, email, memo, create_at, modify_at)
-        VALUES('${name}', '${phone}', '${email}', '${memo}', NOW(), NOW())`
+        `INSERT INTO contact(name, phone, email, subject, memo, create_at, modify_at)
+        VALUES('${name}', '${phone}', '${email}', '${subject}', '${memo}', NOW(), NOW())`
     
     connectionPool.query(SQL_Query, (err, result) => {
         if(err) {
