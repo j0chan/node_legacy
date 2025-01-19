@@ -1,6 +1,6 @@
 <%-include('layouts/header.ejs')%>
     
-    <h2>문의 목록입니다.</h2>
+    <h2>문의 목록</h2>
     
     <table border="1">
         <tr>
@@ -39,45 +39,46 @@
         <% }) %>
     </table>
 
-    <script>
-        // Fetch API로 refactor
-        async function updateContact(contactId) {
-            try {
-                const response = await fetch(`/api/contactDelete/${contactId}`, {
-                    method = 'PUT', // HTTP METHOD
-                    headers: {
-                        'Content-Type': "application/json" // Data type
-                    },
-                    // PUT 요청의 경우 body가 필요할 수 있음
-                })
-
-                if(!response.ok) {
-                    throw new Error('업데이트 오류') // 오류 발생 시 오류 객체를 catch 절로 전달
-                }
-                alert('문의사항이 업데이트 되었습니다.')
-                location.reload()
-
-            } catch (error) {
-                console.log('업데이트 오류: ', error) // 전달받은 오류 처리
-            }
-        }
-
-        function deleteContact(contactId) {
-            // AJAX를 사용한 DELETE 요청 보내기
-            $.ajax({
-                url: `/api/contactDelete/${contactId}`,
-                type: 'DELETE',
-                success: function(response) {
-                    // 삭제 성공 시
-                    alert('문의사항이 삭제되었습니다.')
-                    location.reload()
-                },
-                error: function(error) {
-                    // 오류 처리
-                    console.error('삭제 오류: ', error)
-                }
-            })
-        }
-    </script>
 
 <%-include('layouts/footer.ejs')%>
+
+<script>
+    // Fetch API로 refactor
+    async function updateContact(contactId) {
+        try {
+            const response = await fetch(`/api/contactUpdate/${contactId}`, {
+                method: 'PUT', // HTTP METHOD
+                headers: {
+                    'Content-Type': "application/json" // Data type
+                },
+                // PUT 요청의 경우 body가 필요할 수 있음
+            })
+
+            if(!response.ok) {
+                throw new Error('업데이트 오류') // 오류 발생 시 오류 객체를 catch 절로 전달
+            }
+            alert('문의사항이 업데이트 되었습니다.')
+            location.reload()
+
+        } catch (error) {
+            console.log('업데이트 오류: ', error) // 전달받은 오류 처리
+        }
+    }
+
+    function deleteContact(contactId) {
+        // AJAX를 사용한 DELETE 요청 보내기
+        $.ajax({
+            url: `/api/contactDelete/${contactId}`,
+            type: 'DELETE',
+            success: function(response) {
+                // 삭제 성공 시
+                alert('문의사항이 삭제되었습니다.')
+                location.reload()
+            },
+            error: function(error) {
+                // 오류 처리
+                console.error('삭제 오류: ', error)
+            }
+        })
+    }
+</script>
