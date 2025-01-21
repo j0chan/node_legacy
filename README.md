@@ -1,8 +1,10 @@
-# 레거시 Node.js를 이용한 개인 웹사이트 제작
+# Legacy Node.js를 이용한 개인 웹사이트 제작
 
+<p>학습을 위한 간단한 웹 사이트</p>
 - Node.js
 - npm
 - Express
 - EJS
 - 서버 기본
 - 데이터베이스 연동
+- DB에 form 전송 기능 구현
