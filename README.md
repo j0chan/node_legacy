@@ -1,6 +1,6 @@
 # Legacy Node.js를 이용한 개인 웹사이트 제작
+### Node.js 학습을 위한 간단한 웹 사이트
 
-<p>학습을 위한 간단한 웹 사이트</p>
 - Node.js
 - npm
 - Express
