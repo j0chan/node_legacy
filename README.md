@@ -1,4 +1,4 @@
-# Node.js Tutorial
+# 레거시 Node.js를 이용한 개인 웹사이트 제작
 
 - Node.js
 - npm
